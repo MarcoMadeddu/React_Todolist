@@ -3,6 +3,19 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
+import {createStore} from 'redux';
+import storeReducer from './reducers/index'
+//LET & VARS
+let todos = [
+  'call mama',
+  'be proud',
+  'have fun', 
+];
+
+//FUNCTIONS
+
+
+const store = createStore(storeReducer, {todos: [...todos]});
 
 ReactDOM.render(
   <React.StrictMode>
