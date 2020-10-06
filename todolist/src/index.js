@@ -3,8 +3,12 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
+
+
 import {createStore} from 'redux';
-import storeReducer from './reducers/index'
+import storeReducer from './reducers/index';
+import {Provider} from 'react-redux';
+
 //LET & VARS
 let todos = [
   'call mama',
@@ -18,9 +22,10 @@ let todos = [
 const store = createStore(storeReducer, {todos: [...todos]});
 
 ReactDOM.render(
-  <React.StrictMode>
+
+  <Provider store = {store}>
     <App />
-  </React.StrictMode>,
+  </Provider>,
   document.getElementById('root')
 );
 

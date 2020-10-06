@@ -3,7 +3,7 @@ import './App.css';
 import TodoList from './components/todolist';
 import Header from './components/header';
 import Addtodo from './components/addtodo';
-
+import Mytodolist from './container/mytodolist'
 
 
 
@@ -17,7 +17,7 @@ class App extends Component{
       <div className="App">
         <Header/>
         <Addtodo/>
-        <TodoList todos = {[]}/>
+        <Mytodolist></Mytodolist>
       </div>
     );
   }
