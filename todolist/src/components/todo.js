@@ -1,8 +1,8 @@
+
 import React from 'react';
+export default function todo({todo, onClick, id}){
 
-export default function todo({todo}){
-    return(
-        <li> {todo} <button> - </button></li>
-    )
+return (
+<li onClick={ () => onClick(id)}>{todo}</li>
+) ;
 }
-

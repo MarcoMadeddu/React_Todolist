@@ -1,23 +1,27 @@
-import React, {Component} from 'react';
+import React, { Component } from 'react';
 import './App.css';
-import TodoList from './components/todolist';
-import Header from './components/header';
-import Addtodo from './components/addtodo';
-import Mytodolist from './container/mytodolist'
+import TodoList   from './components/todolist'
+import Header from './components/header'
+import AddNewTodo from './containers/addnew'
+import MyTodoList from './containers/mytodolist';
 
 
 
-class App extends Component{
+class App extends Component {
   constructor(){
     super();
-
+   
+   
   }
-  render(){
+  
+  render() {
     return (
       <div className="App">
-        <Header/>
-        <Addtodo/>
-        <Mytodolist></Mytodolist>
+       <Header/>
+        <div className="container">
+          <AddNewTodo/>
+          <MyTodoList/>
+        </div>
       </div>
     );
   }

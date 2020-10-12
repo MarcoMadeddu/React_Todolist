@@ -1,6 +1,4 @@
- 
- 
- export default  function storeReducer(state = {}, action) {
+export   function storeReducer (state = {}, action)  {
     switch(action.type){
       case 'ADD_TODO' :
       return {
@@ -22,6 +20,3 @@
     }
    
   }
-
-  
- 

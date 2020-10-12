@@ -1,22 +1,21 @@
-import React from 'react';
-import {connect} from 'react-redux';
-import {addTodo} from '../actions/index';
+import React, {Fragment} from 'react';
 
-function addTodoComponent({dispatch}){
-    let todoInput;
+
+export default function addTodoComponent({addTodo}){
+
+     let todoInput;
     return(
-        <>
-        <input ref={(node)=>{todoInput=node}}/>
-        <button onClick={
-            () =>{
-                dispatch(addTodo(todoInput.value));
-                todoInput.value ='';
-            }  
-        }>Add</button>
-        </>
-    )
+        <div className='addtodo'>
+            <input ref ={ node =>  {todoInput = node} }  />
+            
+            <button onClick = {
+                () => {
+                    addTodo( todoInput.value )
+                    todoInput.value = '';
+                }
+                }
+                >Add</button>
+        </div>
+)
 }
-console.log(connect()(addTodoComponent));
-
-export default connect()(addTodoComponent)
 

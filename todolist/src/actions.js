@@ -1,17 +1,16 @@
 export const addTodo = (todo) => {
-   
-    return  {
+    
+    return {
          type: 'ADD_TODO',
          todo
 
      };
- };
-
- export const  removeTodo = (i) => {
-   
+ }
+ export const removeTodo = (i) => {
+  
    return {
         type: 'REMOVE_TODO',
         id : i
 
     };
-};
+}
