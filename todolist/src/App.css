@@ -1,20 +1,24 @@
 .App {
   text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Montserrat', sans-serif;
 }
 
 .App-logo {
   animation: App-logo-spin infinite 20s linear;
   height: 40vmin;
 }
-
+h1{
+  letter-spacing: 20px;
+    font-size: 45px;
+}
 .App-header {
-  background-color: #282c34;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  
-  color: white;
+
+  width: 100%;
+  background: linear-gradient(16deg, rgba(240,233,235,1) 61%, rgba(158,89,170,1) 100%);
 }
 
 .App-link {
@@ -22,20 +26,28 @@
 }
 ul{
 list-style: none;
+flex-basis: 50%;
 }
+
 li{
   text-align: left;
   border-bottom: 1px solid #ddd;
   padding: 10px 0px;
   cursor: pointer;
   min-width: 250px;
+  font-size: 21px;
 }
 li:hover:after{
   content: '\02A2F';
   color: red;
-  font-size: 18px;
+  font-size: 20px;
   float: right;
   margin-right: 5px;
+ 
+}
+
+li:last-child{
+ border:none;
  
 }
 
@@ -45,19 +57,34 @@ li:hover:after{
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: flex-start;
-  margin-top: 20px;
+  background: linear-gradient(198deg, rgba(240,233,235,1) 61%, rgba(158,89,170,1) 100%);
+  padding-top: 100px;
 }
-
 
 .addtodo input{
   height: 30px;
   border: 2px solid black;
   margin-right: 10px;
+  background-color: transparent;
+}
+
+.addtodo{
+  flex-basis: 50%;
+  height: 100px;
 }
 
 .addtodo button{
   height: 30px;
   border: 2px solid black;
   border-radius: 10px;
+  background-color: transparent;
+}
+
+.todolist{
+  width: 50%;
+  border: 2px solid #c5a0ca;
+  border-radius: 10px;
+  padding-top: 20px;
+  display: flex;
+  align-items: center
 }
