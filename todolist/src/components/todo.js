@@ -1,8 +1,8 @@
 
 import React from 'react';
-export default function todo({todo, onClick, id}){
+export default function todo({todoItem, onClick, id}){
 
 return (
-<li onClick={ () => onClick(id)}>{todo}</li>
+<li className={todoItem.completed ? 'completed' : 'uncompleted'} onClick={ () => onClick(id)}><span>{todoItem.todo}</span></li>
 ) ;
 }

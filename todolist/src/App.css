@@ -70,7 +70,7 @@ li:last-child{
 
 .addtodo{
   flex-basis: 50%;
-  height: 100px;
+  min-height: 50px;
 }
 
 .addtodo button{
@@ -82,9 +82,47 @@ li:last-child{
 
 .todolist{
   width: 50%;
-  border: 2px solid #c5a0ca;
+  border: 2px solid #893994;
   border-radius: 10px;
   padding-top: 20px;
   display: flex;
   align-items: center
 }
+
+
+.completed span{
+  text-decoration-line: line-through;
+}
+
+
+
+.search{
+  font-size: 20px;
+  width: 50%;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  margin-bottom: 10px;
+}
+
+.search a{
+  text-decoration: none;
+  color: black;
+  border: 2px solid #893994;;
+  padding: 10px;
+  border-radius: 20px;
+  width: calc(80% / 3);
+  transition: transform 0.4s;
+}
+.search a:hover{
+  transform: scale(1.1);
+ }
+
+@media (max-width: 900px) { 
+  .todolist,
+  .search{
+    width: 90%;
+  }
+  
+ }
